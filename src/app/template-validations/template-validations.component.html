@@ -1,0 +1,57 @@
+<p>template-validations works!</p>
+<div class="container">
+    <table class="table"> 
+    <h1>User Registration using Template driven form</h1>
+      
+    <div class="form-group col-7 d-flex">
+        <input type = "text" name = "FullName" class="form-control" placeholder = "FullName" [(ngModel)]="model.FullName" #FullName="ngModel" required />
+        <div *ngIf="FullName.invalid && (FullName.touched || FullName.dirty)">
+            <div *ngIf="FullName.errors?.required" class="text-danger">
+                full name is required
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-5 d-flex">
+        <input type="Email" name="Email" class="form-control" placeholder = "Email" [(ngModel)]="model.Email" #Email="ngModel"  required />
+        <div *ngIf="Email.touched">
+            <p *ngIf="Email.errors?.required" class="text-danger">
+               Email is required</p>
+               <p *ngIf="Email.errors?.Email">This is not a valid Email!!!</p>
+        </div>
+    </div>
+    <div class="form-group col-7 d-flex">
+        <input type = "number" name = "PhoneNo" class="form-control" placeholder = "PhoneNo" [(ngModel)]="model.PhoneNo"  #PhoneNo="ngModel" required /> 
+    </div>
+    
+    <div class="form-group col-7 d-flex">
+       <input type="password" name="password" class="form-control" placeholder = "Password" [(ngModel)]="model.password"  #Password="ngModel" minlength="6" required /> 
+        <div *ngIf="Password.invalid && (Password.touched || Password.dirty)">
+                <div *ngIf="Password.errors?.required" class="text-danger">
+                   password is required
+                </div>
+                <div *ngIf="Password.errors?.minlength">
+                     password length should be atleast 6
+             </div>
+        </div> 
+        
+    </div>
+ 
+    <div class="form-group col-5 d-flex">  
+       <input type="Conformpassword" name="Conformpassword" class="form-control" placeholder = "Conformpassword"[(ngModel)]="model.Conformpassword"  #Conformpassword="ngModel" minlength="6" required>
+        <div *ngIf="Conformpassword.invalid && (Conformpassword.touched || Conformpassword.dirty)">
+            <div *ngIf="Conformpassword.errors?.required" class="text-danger">
+                    Conformpassword is required
+                </div>
+                <div *ngIf="Conformpassword.errors?.minlength">
+                    Conformpassword length should be atleast 6
+            </div>
+        </div> 
+                
+    </div> 
+    <input type="checkbox" style="margin-left:5px;">
+    <label>Agree with terms and conditions</label>
+    <div class="text-center"><br>
+    <button class="btn btn-primary mr-1" (click)="onclick()">Register</button>
+    </div><br><br>
+    </table>
+    </div>

@@ -1,0 +1,27 @@
+<p>directive-pipe works!</p>
+<div class="container">
+    <h1>Employees</h1>
+        <table class="table">
+            <thead >
+                <tr class="table-dark">
+                    <td>Employee ID</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Salary</td>
+                    <td>DOB</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+           <tbody>
+  
+  <tr *ngFor="let emp of empList" appColor>
+                <td>{{emp.id}}</td>
+                <td>{{emp.firstname}}</td>
+                <td>{{emp.lastname}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.dob | date }}</td>
+                <td>{{emp.email}}</td>
+            </tr>
+           </tbody>
+        </table>
+</div>

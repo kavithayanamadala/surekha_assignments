@@ -1,0 +1,86 @@
+<p>reactive-validations works!</p>
+<div class="container" >
+    <table class="table"> 
+    <div class="container">
+        <h1>Employee Registration Form</h1>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div class="form-group col-5">
+            <input type="text" formControlName="FullName"  placeholder = "FullName"/>                
+            <div *ngIf="f.FullName.touched && f.FullName.invalid" class="text-danger">
+            <span *ngIf ="f.FullName.errors?.required">FullName is reqiured</span>
+            </div>    
+        </div>
+    <div class="form-group col-5">
+        <input type="text" formControlName="Email"  placeholder = "Email"/>
+        <div *ngIf="f.Email.touched && f.Email.invalid" class="text-danger">
+            <div *ngIf ="f.Email.errors?.required">Email is reqiured</div>
+            <div *ngIf="f.Email.errors?.email">Email must be a valid email address</div>
+             <div *ngIf="f.Email.errors?.pattern">
+                Email Pattern Is Invalid
+            </div>
+        </div>     
+    </div>
+    <div class="form-group col-5">
+        <input type="text" formControlName="Address" placeholder = "Address"/>                
+          <div *ngIf="f.Address.touched && f.Address.invalid" class="text-danger">
+          <div *ngIf ="f.Address.errors?.required">Address is reqiured</div>
+        </div> 
+    </div>
+    <div class="form-group col-5">
+       <input type="text" formControlName="City"  placeholder = "City"/>
+         <div *ngIf="f.City.touched && f.City.invalid" class="text-danger" > 
+     <div *ngIf ="f.City.errors?.required" class="text-danger">City is reqiured
+
+      </div> 
+        </div> 
+    </div>
+    <div class="form-group col-5">
+        <input type="text" formControlName="Phoneno"  placeholder = "Phoneno"/> 
+        <div *ngIf="f.City.touched && f.City.invalid" class="text-danger" >                
+          <div *ngIf="f.Phoneno.errors?.required" class="text-danger"> phoneno is required</div>
+        <div *ngIf="f.Phoneno.errors?.pattern" >Only Enter Numbers...10 Digit</div>
+     </div>
+    </div>
+    <div class="form-group col-5">
+        <!-- <input type="text" formControlName="password" class="form-control" placeholder = "password"/> -->
+        <!-- <input type="password" formControlName="password"  placeholder = "password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+      </div> -->
+      <input type="text" class="input" placeholder="password" formcontrolname="password">
+      <!-- <div class="err" *ngIf="submitted && f.password.errors"> -->
+        <div *ngIf="f.City.touched && f.City.invalid" class="text-danger" > 
+      <div *ngIf="f.password.errors?.required" class="text-danger">password is required</div>
+      <div *ngIf="f.password.errors?.minLength">password at least 6</div>
+       </div>
+     </div>
+    <div class="form-group col-5">
+       <!-- <input type="text" formControlName="Conformpassword" class="form-control" placeholder = "Conformpassword"/> -->
+         <!-- <input type="Conformpassword" formControlName="Conformpassword"  placeholder = "Conformpassword" [ngClass]="{ 'is-invalid': submitted && f.Conformpassword.errors }" />
+        <div *ngIf="submitted && f.Conformpassword.errors" class="invalid-feedback">
+        <div *ngIf="f.Conformpassword.errors.required">Conformpassword is required</div>
+        <div *ngIf="f.Conformpassword.errors.minlength">password must match</div>
+        </div>  -->
+        
+        <input type="text" class="input" placeholder="Confirmpassword" formcontrolname="Confirmpassword">
+      <!-- <div class="err" *ngIf="submitted && f.Conformpassword.errors"> -->
+        <div *ngIf="f.Confirmpassword.touched && f.City.invalid" class="text-danger" > 
+      <div *ngIf="f.Confirmpassword.errors?.required" class="text-danger">
+        Confirmpassword is required
+    </div>
+      <div *ngIf="f.Confirmpassword.errors?.MustMatch">password must matching</div>
+      
+    </div>
+    </div>
+          <input type="checkbox" style="margin-left:5px;">
+         <label>I Agree with terms and conditions</label>
+            <div class="text-center"><br>
+                
+                    <button class="btn btn-primary mr-1" (click)="onclick()">Register</button>
+            </div><br><br>
+             
+    </form>
+    </div> 
+ </table>  
+</div>
