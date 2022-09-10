@@ -19,6 +19,7 @@ import { RoutesComponent } from './routes/routes.component';
 import { WildcardComponent } from './wildcard/wildcard.component';
 import { DirectivePipeComponent } from './directive-pipe/directive-pipe.component';
 import { ColorDirective } from './Directives/color-directive';
+import { PasswordValidationsComponent } from './password-validations/password-validations.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ColorDirective } from './Directives/color-directive';
     RoutesComponent,
     WildcardComponent,
     DirectivePipeComponent,
-    ColorDirective 
+    ColorDirective,
+    PasswordValidationsComponent 
   ],
   imports: [
     BrowserModule,

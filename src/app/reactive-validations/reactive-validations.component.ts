@@ -10,7 +10,9 @@ export class ReactiveValidationsComponent implements OnInit {
   reactiveForm!:FormGroup;
   submitted=false;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder) { 
+    
+  }
 
   ngOnInit(): void {
     this.reactiveForm=this.formBuilder.group({
@@ -27,6 +29,8 @@ export class ReactiveValidationsComponent implements OnInit {
   get f(){
     return this.reactiveForm.controls;
 }
+
+
 onSubmit(){
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.reactiveForm.value));
 }

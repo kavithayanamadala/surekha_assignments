@@ -5,6 +5,7 @@ import { DirectivePipeComponent } from './directive-pipe/directive-pipe.componen
 import { EmpEditUpdateComponent } from './emp-edit-update/emp-edit-update.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { HomeComponent } from './home/home.component';
+import { PasswordValidationsComponent } from './password-validations/password-validations.component';
 import { ProductComponent } from './product/product.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveValidationsComponent } from './reactive-validations/reactive-validations.component';
@@ -59,6 +60,10 @@ const routes: Routes = [
       {
         path:"directive-pipe",
         component:DirectivePipeComponent
+        },
+        {
+          path:"password-validations",
+          component:PasswordValidationsComponent
         },
       {
         path:"**",
