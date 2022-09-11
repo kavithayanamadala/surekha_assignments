@@ -16,10 +16,10 @@
   
   <tr *ngFor="let emp of empList" appColor>
                 <td>{{emp.id}}</td>
-                <td>{{emp.firstname}}</td>
-                <td>{{emp.lastname}}</td>
-                <td>{{emp.salary}}</td>
-                <td>{{emp.dob | date }}</td>
+                <td>{{emp.firstname|uppercase}}</td>
+                <td>{{emp.lastname|decorate:"***"}}</td>
+                <td>{{emp.salary| currency}}</td>
+                <td>{{emp.dob | date:"medium"|uppercase }}</td>
                 <td>{{emp.email}}</td>
             </tr>
            </tbody>

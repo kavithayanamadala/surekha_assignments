@@ -6,6 +6,7 @@ import { EmpEditUpdateComponent } from './emp-edit-update/emp-edit-update.compon
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { HomeComponent } from './home/home.component';
 import { PasswordValidationsComponent } from './password-validations/password-validations.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductComponent } from './product/product.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveValidationsComponent } from './reactive-validations/reactive-validations.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path:"product",
     component:ProductComponent 
+  },
+  {
+    path:"product-details/:id",
+    component:ProductDetailsComponent
   },
   {
     path:"contact",

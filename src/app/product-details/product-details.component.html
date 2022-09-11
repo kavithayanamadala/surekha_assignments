@@ -1,35 +1,10 @@
 <p>product-details works!</p>
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">price</th>
-        <td></td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Samsung</th>
-        <td>8999</td>
-        <td><button routerLink="/product" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button>
-        </td>
-        
-        
-    </tr>
-      <tr>
-        <th scope="row">Nokia</th>
-        <td>10000</td>
-        <td><button routerLink="/product" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
-        <tr>
-            <th scope="row">Apple</th>
-            <td>20000</td>
-            <td><button routerLink="/product" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
-        </tr>
-          <tr>
-            <th scope="row">Google Pixel</th>
-            <td>15000</td>
-            <td><button routerLink="/product" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
-       
-      
-    </tbody>
-  </table>
+
+  <img src="assets/images/download.jfif" style="width:450px;height:320px">
+
+ <div class="container">
+    <h3  style="text-align:center;"><b><i>Product Name  :   </i></b>{{singleproduct.name}}</h3>
+  <h3  style="text-align:center;"><b><i>Description  :  </i></b>{{singleproduct.desc}}</h3>
+  <h3  style="text-align:center;"><b><i>Price  :    </i></b>{{singleproduct.price}}</h3>
+</div>
+ 

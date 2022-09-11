@@ -1,5 +1,65 @@
 <p>product works!</p>
-<div card="class">
+<!-- <div card="class">
     <input type="text" value="product Details" style="margin-left:6rem; width:15rem">
     </div>
-    <app-product-details></app-product-details>
+    <app-product-details></app-product-details> -->
+    <!-- <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">price</th>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Samsung</th>
+            <td>8999</td>
+            <td><button routerLink="/product" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button>
+            </td>
+            
+            
+        </tr>
+          <tr>
+            <th scope="row">Nokia</th>
+            <td>10000</td>
+            <td><button routerLink="/product/product-details/{{name}}" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
+            <tr>
+                <th scope="row">Apple</th>
+                <td>20000</td>
+                <td><button routerLink="/product-details" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
+            </tr>
+              <tr>
+                <th scope="row">Google Pixel</th>
+                <td>15000</td>
+                <td><button routerLink="/product-details" type="button" class="btn btn-primary" style="margin-left:6rem; width:10rem">viewdetails</button></td>
+           
+          
+        </tbody>
+      </table>
+     -->
+
+     <div class="container">
+        <h1>Product Details</h1>
+            <table class="table">
+                <thead >
+                    <tr class="table-dark">
+                        <td>Product ID</td>
+                        <td>Product Name</td>
+                    </tr>
+                </thead>
+               <tbody>
+      
+      <tr *ngFor="let pro of products">
+                    <td>{{pro.id}}</td>
+                    <td>{{pro.name}}</td>
+                    <td>
+                        <a routerLink="/product-details/{{pro.id}}" class="btn btn-success">View Details</a>
+                                                    
+                    </td>
+
+                </tr>
+               </tbody>
+            </table>
+            
+    </div>
